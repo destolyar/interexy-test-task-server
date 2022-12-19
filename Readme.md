@@ -4,10 +4,10 @@ Deploy you can find [here](https://vladislav-metik-interexy.herokuapp.com).
 
 ## Routes
 
-### /api/user/create - email and password in body
-### /api/user/login - email and password in body
-### /api/user/change - userId, email, password, bio in body
-### /api/user/:userId - user id as path parameter
+### POST /api/user/create - Email and password in body. Returns user.
+### POST /api/user/login - Email and password in body. Returns user.
+### POST /api/user/change - UserId, email, password, bio in body. Rewrite user info and returns user with new info.
+### GET /api/user/:userId - User id as path parameter. Returns user object.
 
 ## For running locally
 
