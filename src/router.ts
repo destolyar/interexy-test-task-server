@@ -11,7 +11,12 @@ router.post('/user/login',
   body('email').isEmail().notEmpty(),
   body('password').isLength({ min: 6, max: 32 }).notEmpty(),
   UserController.login)
-router.post('/user/change', UserController.rewriteInfo) 
+router.post('/user/change',
+  body('userId').notEmpty(),
+  body('email').isEmail().notEmpty(),
+  body('password').notEmpty(),
+  body('bio').notEmpty(),
+UserController.rewriteInfo) 
 router.get('/user/:userId', UserController.getOne);
 
 export default router;
