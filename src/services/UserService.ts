@@ -48,11 +48,6 @@ class UserService {
       throw ApiError.NotFound("User not found")
     }
 
-    const isEmailFree = await UserSchema.findOne({email})
-    if(!isEmailFree) {
-      throw ApiError.NotFound(`User with email ${email} already exists`)
-    }
-
     const hashedPassword = bcrypt.hashSync(password, 6)
 
     const updatedUser = UserSchema.findByIdAndUpdate(userId, {
