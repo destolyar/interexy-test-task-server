@@ -2,6 +2,13 @@
 
 Deploy you can find [here](https://vladislav-metik-interexy.herokuapp.com). 
 
+## Routes
+
+### /api/user/create - email and password in body
+### /api/user/login - email and password in body
+### /api/user/change - userId, email, password, bio in body
+### /api/user/:userId - user id as path parameter
+
 ## For running locally
 
 ### In the project directory, run for dependencies install:
